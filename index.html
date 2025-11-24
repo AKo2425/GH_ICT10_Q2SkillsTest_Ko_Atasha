@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>School Club Information</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+
+    <!-- PyScript -->
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+
+    <style>
+        body {
+            background: #040927;
+            font-family: "Segoe UI", sans-serif;
+            color: #fff;
+        }
+
+        .page-title {
+            font-family: "Georgia", serif;
+            color: #f0f0f0;
+            font-weight: bold;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            background-color: #110826;
+            margin: 40px auto;
+            padding: 30px;
+            width: 80%;
+            max-width: 600px;
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(75, 113, 137, 0.5);
+            text-align: center;
+        }
+
+        .line {
+            height: 3px;
+            width: 100px;
+            background: #353665;
+            margin: 10px auto 25px auto;
+            border-radius: 2px;
+        }
+
+        select,
+        button {
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        select {
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #353665;
+            background-color: #1c1b3a;
+            color: #fff;
+            font-weight: 500;
+        }
+
+        button {
+            background-color: #393a4b;
+            color: white;
+            font-weight: bold;
+            border-radius: 8px;
+            padding: 12px;
+            letter-spacing: 0.5px;
+            border: none;
+            margin-bottom: 20px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #070f1b;
+        }
+
+        #output {
+            background: #dde0e6;
+            border-left: 6px solid #13273b;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: "Courier New", monospace;
+            font-size: 15px;
+            white-space: pre-line;
+            color: #222139;
+            text-align: left;
+        }
+
+        label {
+            font-weight: 600;
+            color: #f0f0f0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center page-title">School Club Information</h1>
+        <div class="line"></div>
+
+        <label for="clubSelect">Select a Club:</label>
+        <select id="clubSelect">
+            <option value="Drama Club">Drama Club</option>
+            <option value="Tennis Club">Tennis Club</option>
+            <option value="Science Club">Science Club</option>
+            <option value="Swimming Club">Swimming Club</option>
+        </select>
+
+        <button py-click="show_info">Show Club Information</button>
+
+
+        <div id="output"></div>
+    </div>
+
+
+    <script type="py" src="main.py"></script>
+</body>
+
+</html>
